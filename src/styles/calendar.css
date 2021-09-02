@@ -1,0 +1,91 @@
+.fadeOutDown {
+    -webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.calendarContainer {
+    width: 100%;
+    max-width: 300px;
+    height: 500px;
+    background-image: url("../images/CalendarPaper.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.calendarImageContainer {
+    max-width: 500px;
+    height: 700px;
+    cursor: pointer;
+    animation: fadeIn 0.5s;
+}
+
+.calendarImageContainerSlide {
+    width: 100%;
+    max-width: 300px;
+    height: 700px;
+    cursor: pointer;
+    animation: fadeOutDown 1s;
+}
+
+.calendarImageContainerSlide > img{
+    width: 100%;
+}
+
+.calendarImageContainer > img {
+    width: 100%;
+}
